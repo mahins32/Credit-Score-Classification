@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #0f2a44;
+    --secondary: #1f6ae1;
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --success: #e6f4ea;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #0f2a44, #1f6ae1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 460px;
+    background: var(--card);
+    padding: 34px 38px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Labels */
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-top: 14px;
+    display: block;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fafbff;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(31, 106, 225, 0.15);
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(120deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(31, 106, 225, 0.4);
+}
+
+/* Result */
+.result {
+    margin-top: 26px;
+    padding: 16px;
+    background: var(--success);
+    border-left: 6px solid #2e7d32;
+    border-radius: 10px;
+}
+
+.result p {
+    font-size: 14px;
+    margin: 6px 0;
+    color: #1b5e20;
+    font-weight: 500;
+}
+
+/* Error */
+.error {
+    margin-top: 18px;
+    text-align: center;
+    color: #b91c1c;
+    font-weight: 500;
+    font-size: 14px;
+}

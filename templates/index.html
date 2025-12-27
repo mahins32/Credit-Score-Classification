@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Score Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Credit Score Prediction System</h2>
+
+    <form action="/predict" method="post">
+
+        <!-- Age -->
+        <label>Age</label>
+        <input type="number" name="f1" placeholder="e.g. 28" required>
+
+        <!-- Annual Income -->
+        <label>Annual Income</label>
+        <input type="number" name="f2" placeholder="e.g. 550000" required>
+
+        <!-- Monthly Inhand Salary -->
+        <label>Monthly Inhand Salary</label>
+        <input type="number" name="f3" placeholder="e.g. 42000" required>
+
+        <!-- Number of Bank Accounts -->
+        <label>Number of Bank Accounts</label>
+        <input type="number" name="f4" placeholder="e.g. 3" required>
+
+        <!-- Model Selection -->
+        <label>Select Model</label>
+        <select name="model" required>
+            <option value="rf">Random Forest</option>
+            <option value="lr">Logistic Regression</option>
+        </select>
+
+        <button type="submit">Predict Credit Score</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <p><strong>Model Used:</strong> {{ model_used }}</p>
+            <p><strong>Predicted Credit Score:</strong> {{ prediction }}</p>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

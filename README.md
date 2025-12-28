@@ -102,4 +102,4 @@ credit score classification using a Flask-based web interface.
 
 ## 👨‍💻 Author
 
-Mahin
+Saiful Islam Mahin
